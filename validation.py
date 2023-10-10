@@ -22,7 +22,7 @@ def draw_circle(img, row, col, rad):
 
 
 def noisy_circle(size, radius, noise):
-    img = np.zeros((size, size), dtype=np.float)
+    img = np.zeros((size, size), dtype= float)
 
     # Circle
     row = np.random.randint(size)
