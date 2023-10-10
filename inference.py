@@ -1,4 +1,6 @@
 import numpy as np
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from shapely.geometry.point import Point
 from PIL import Image
@@ -73,7 +75,7 @@ def main():
     img_arr = np.array(img)
     plt.figure()
     plt.imshow(img_arr)
-    plt.show(block=True)
+    plt.savefig('test.png')
 
     detected = find_circle(img_arr)
     print(detected)
