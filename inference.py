@@ -77,8 +77,8 @@ def main():
     plt.imshow(img_arr)
     plt.savefig('test.png')
 
-    detected = find_circle(img_arr)
-    print(detected)
+    #detected = find_circle(img_arr)
+    #print(detected)
     # for _ in range(1000):
     #     params, img = noisy_circle(200, 75, 1)
     #     detected = find_circle(img)
