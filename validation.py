@@ -71,8 +71,7 @@ def main():
         params, img = noisy_circle(200, 75, 1)
         detected = find_circle(img)
         results.append(iou(params, detected))
-    results = np.array(results)
-    print(results)
+    results = np.array(results)    
     print((results > 0.7).mean())
 
 
