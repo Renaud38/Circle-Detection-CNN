@@ -69,6 +69,7 @@ def iou(params0, params1):
 def main():
     results = []
     img = Image.open(r"/mnt/s3bucket/alector-immuno-neurology/inference_images/Adil_VID1467_A2_1_00d00h20m.tif")
+    plt.figure()
     img.show()
     for _ in range(1000):
         params, img = noisy_circle(200, 75, 1)
