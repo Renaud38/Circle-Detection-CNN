@@ -73,6 +73,7 @@ def main():
     img_arr = np.array(img)
     plt.figure()
     plt.imshow(img_arr)
+    plt.show(block=True)
     
     for _ in range(1000):
         params, img = noisy_circle(200, 75, 1)
