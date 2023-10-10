@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 from shapely.geometry.point import Point
 from PIL import Image
 from skimage.draw import circle_perimeter_aa
@@ -68,9 +69,11 @@ def iou(params0, params1):
 
 def main():
     results = []
-    img = Image.open(r"/mnt/s3bucket/alector-immuno-neurology/inference_images/Adil_VID1467_A2_1_00d00h20m.tif")
+    img = Image.open("/mnt/s3bucket/alector-immuno-neurology/inference_images/Adil_VID1467_A2_1_00d00h20m.tif")
+    img_arr = np.array(img)
     plt.figure()
-    img.show()
+    plt.imshow(img_arr)
+    
     for _ in range(1000):
         params, img = noisy_circle(200, 75, 1)
         detected = find_circle(img)
