@@ -1,6 +1,6 @@
 import numpy as np
 from shapely.geometry.point import Point
-from Pillow import Image
+from PIL import Image
 from skimage.draw import circle_perimeter_aa
 import torch
 import torch.nn.parallel
