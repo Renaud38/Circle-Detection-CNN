@@ -73,6 +73,7 @@ def main():
     results = []
     img = Image.open("/mnt/s3bucket/alector-immuno-neurology/inference_images/Adil_VID1467_A2_1_00d00h20m.tif")
     img_arr = np.array(img)
+    print(img_arr)
     plt.figure()
     plt.imshow(img_arr)
     plt.savefig('test.png')
