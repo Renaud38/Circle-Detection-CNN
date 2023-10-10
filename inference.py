@@ -74,10 +74,12 @@ def main():
     plt.figure()
     plt.imshow(img_arr)
     plt.show(block=True)
-    
-    for _ in range(1000):
-        params, img = noisy_circle(200, 75, 1)
-        detected = find_circle(img)
+
+    detected = find_circle(img_arr)
+    print(detected)
+    # for _ in range(1000):
+    #     params, img = noisy_circle(200, 75, 1)
+    #     detected = find_circle(img)
         #results.append(iou(params, detected))
     #results = np.array(results)    
     #print((results > 0.7).mean())
